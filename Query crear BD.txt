@@ -1,0 +1,25 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- public.vitalisticas_recordatorio definition
+
+-- Drop table
+
+-- DROP TABLE public.vitalisticas_recordatorio;
+
+
+-- DROP SEQUENCE public.seq_id_vitalistica_recordatorio
+
+CREATE SEQUENCE public.seq_id_vitalistica_recordatorio
+	INCREMENT BY 1
+	NO MINVALUE
+	MAXVALUE -1
+	START 1000
+	CACHE 1
+	NO CYCLE;
+);
+
+
+-- Reiniciar la secuencia a un valor específico (por ejemplo, 1 en este caso)
+ALTER SEQUENCE public.seq_id_vitalistica_recordatorio RESTART WITH 1;
+
+SELECT * FROM public.vitalisticas_recordatorio where id_vitalistica = 2226
